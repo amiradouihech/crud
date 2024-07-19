@@ -7,7 +7,7 @@ import {
     Input,
   } from '@chakra-ui/react'
   
-function InputsGroup({name,onchangeHandler,errors}) {
+function InputsGroup({name,onchangeHandler,errors,value}) {
 
     
   return (
@@ -15,7 +15,7 @@ function InputsGroup({name,onchangeHandler,errors}) {
   <FormLabel>
     {name}
   </FormLabel>
-  <Input type='text' name={name} onChange={onchangeHandler}/>
+  <Input type='text' name={name} onChange={onchangeHandler} value={value}/>
   {
     errors && errors?.map((err)=>{
         return <FormErrorMessage>{err}</FormErrorMessage>
